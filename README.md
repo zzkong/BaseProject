@@ -35,4 +35,7 @@
 <p>
 	&nbsp; &nbsp; &nbsp; &nbsp; 7.项目主框架代码大量参考了https://github.com/gzsll/TLint &nbsp;https://github.com/zj-wukewei/Hot http://wuxiaolong.me/2016/06/12/mvpRetrofitRxjava/
 </p>
-&nbsp; &nbsp; &nbsp; &nbsp; 8.所有代码非原创，我只是个搬运工。练手工，如有不妥请留言联系。
+<p>
+	<span style="white-space:pre">	</span>8.项目中使用了gankapi作为数据来源，再此感谢gank daimajia和所有开源的人
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; 9.所有代码非原创，我只是个搬运工。练手工，如有不妥请留言联系。
