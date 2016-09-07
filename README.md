@@ -3,17 +3,11 @@
 <br />
 
 <p>
-	基本功能:
+	基本功能:1.滑动返回，所有的activity都extends SwipeBackAppCompatActivity，方便实现滑动返回。
 </p>
 <p>
-	<span style="white-space:pre">	</span>1. 滑动返回，所有的activity都extends SwipeBackAppCompatActivity，方便实现滑动返回。
+	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.BaseActivity &nbsp;BaseMvpActivity。如果你想再项目中使用MVP模式 Activity只需extends BaseMvpActivity就可以，
 </p>
-<p>
-	<br />
-	
-</p>
-&nbsp; &nbsp; &nbsp; &nbsp; 2. BaseActivity &nbsp;BaseMvpActivity。如果你想再项目中使用MVP模式 Activity只需extends BaseMvpActivity就可以，<br />
-
 <p>
 	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;如果你觉得界面逻辑简单，不想使用MVP模式，可以直接extends BaseActivity。同理，BaseLazyFragment &nbsp;BaseFragment是一样。
 </p>
@@ -66,4 +60,3 @@
 	
 </p>
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8.所有代码非原创，我只是个搬运工。练手工，如有不妥请留言联系。
-         
