@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WifiMusicPro/!svn/ver/1078/Android/SourceCode/ultra-pull-to-refresh
+END
+proguard-rules.pro
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/proguard-rules.pro
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/.gitignore
+END
+build.gradle
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/build.gradle
+END
+gradle.properties
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/gradle.properties
+END
+ultra-pull-to-refresh.iml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WifiMusicPro/!svn/ver/1031/Android/SourceCode/ultra-pull-to-refresh/ultra-pull-to-refresh.iml
+END

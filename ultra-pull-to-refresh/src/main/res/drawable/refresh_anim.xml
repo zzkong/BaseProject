@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"
+    >
+    <item android:drawable="@drawable/refresh_29" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_30" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_31" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_32" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_33" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_34" android:duration="20"></item>
+
+    <item android:drawable="@drawable/refresh_35" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_36" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_37" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_38" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_39" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_40" android:duration="20"></item>
+
+    <item android:drawable="@drawable/refresh_41" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_42" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_43" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_44" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_45" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_46" android:duration="20"></item>
+
+
+    <item android:drawable="@drawable/refresh_47" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_48" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_49" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_50" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_51" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_52" android:duration="20"></item>
+
+
+    <item android:drawable="@drawable/refresh_53" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_54" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_55" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_56" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_57" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_58" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_59" android:duration="20"></item>
+    <item android:drawable="@drawable/refresh_60" android:duration="20"></item>
+</animation-list>

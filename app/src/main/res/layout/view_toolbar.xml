@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/tool_bar"
+                                   android:layout_width="match_parent"
+                                   android:layout_height="48dp"
+                                   android:background="@color/colorAccent"
+                                   android:minHeight="?attr/actionBarSize"
+                                   android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                                   app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/img_back"
+        android:layout_gravity="left"
+        android:onClick="backClick"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/back_select"/>
+    <TextView
+        android:id="@+id/text_title"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/text_right"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:paddingRight="10dp"
+        android:visibility="gone"
+        android:onClick="rightClick"
+        android:textStyle="bold"
+        android:text="Save"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/share_img"
+        android:layout_gravity="right"
+        android:onClick="shareClick"
+        android:visibility="gone"
+        android:layout_marginRight="10dp"/>
+
+</android.support.v7.widget.Toolbar>

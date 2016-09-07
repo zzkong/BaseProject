@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WifiMusicPro/!svn/ver/939/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal
+END
+OnRefreshListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/OnRefreshListener.java
+END
+RefreshHeadView.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WifiMusicPro/!svn/ver/939/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/RefreshHeadView.java
+END
+OnDefaultRefreshListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/OnDefaultRefreshListener.java
+END
+PtrUIHandlerHook.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/PtrUIHandlerHook.java
+END
+PtrClassicDefaultHeader.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/PtrClassicDefaultHeader.java
+END
+BaseIndicatorController.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WifiMusicPro/!svn/ver/939/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/BaseIndicatorController.java
+END
+LineScaleIndicator.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WifiMusicPro/!svn/ver/939/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/LineScaleIndicator.java
+END
+PtrFrameLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/PtrFrameLayout.java
+END
+PtrUIHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/PtrUIHandler.java
+END
+RefreshLoadView.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WifiMusicPro/!svn/ver/939/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/RefreshLoadView.java
+END
+PtrUIHandlerHolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/PtrUIHandlerHolder.java
+END
+LineScalePulseOutIndicator.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/WifiMusicPro/!svn/ver/939/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/LineScalePulseOutIndicator.java
+END
+PtrClassicFrameLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/WifiMusicPro/!svn/ver/439/Android/SourceCode/ultra-pull-to-refresh/src/main/java/cn/finalteam/loadingviewfinal/PtrClassicFrameLayout.java
+END

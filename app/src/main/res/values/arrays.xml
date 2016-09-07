@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="gank_content">
+        <item>福利</item>
+        <item>Android</item>
+        <item>IOS</item>
+        <item>休息视频</item>
+        <item>拓展资源</item>
+        <item>前端</item>
+    </array>
+</resources>
