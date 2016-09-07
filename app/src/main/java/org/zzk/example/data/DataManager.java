@@ -1,7 +1,6 @@
 package org.zzk.example.data;
 
 import android.content.SharedPreferences;
-import android.util.Log;
 
 import org.zzk.example.bean.GankBean;
 import org.zzk.example.data.api.GankApi;

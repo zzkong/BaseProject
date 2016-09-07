@@ -8,15 +8,20 @@ import org.zzk.example.data.DataManager;
 import org.zzk.example.injector.PerActivity;
 import org.zzk.example.ui.BasePresenter;
 
+import java.util.concurrent.TimeUnit;
+
 import javax.inject.Inject;
 
+import rx.Observable;
 import rx.Subscription;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
 
 /**
  * Created by zwl on 16/9/5.
  */
 @PerActivity
-public class SplashPresenter extends BasePresenter<SplashContract.View> implements SplashContract.Presenter{
+public class SplashPresenter extends BasePresenter<SplashContract.View> implements SplashContract.Presenter {
 
     @Inject
     public SplashPresenter(DataManager dataManager, Activity activity) {
@@ -26,17 +31,15 @@ public class SplashPresenter extends BasePresenter<SplashContract.View> implemen
     @Override
     public void checkIsFirstIn(Context context) {
         SharedPreferences preferences = context.getSharedPreferences("isFirstIn", Context.MODE_PRIVATE);
-        Subscription subscription = mDataManager.getIsFirstIn(preferences)
-                .subscribe(aboolean ->{
-                    if(aboolean) {
+        Subscription subscription = Observable.timer(2, TimeUnit.SECONDS, AndroidSchedulers.mainThread())
+                .flatMap(aLong -> mDataManager.getIsFirstIn(preferences))
+                .subscribe((Action1<Boolean>) aboolean -> {
+                    if (aboolean) {
                         mView.readyGoGuide();
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putBoolean("isFirstIn", false);
                         editor.commit();
-                    }
-                    else mView.readyGoMain();
-                }, throwable -> {
-
+                    } else mView.readyGoMain();
                 });
         addSubscribe(subscription);
     }
