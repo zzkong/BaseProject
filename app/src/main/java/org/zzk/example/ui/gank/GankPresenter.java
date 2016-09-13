@@ -47,6 +47,9 @@ public class GankPresenter extends BasePresenter<GankContract.View> implements G
         mView.initAdapter(commonAdapter);
     }
 
+    /**
+     * 获取gank数据
+     */
     @Override
     public void getGankData(String title, int page, boolean isRefresh) {
         Subscription subscription = mDataManager.getGankData(title, page)

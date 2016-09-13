@@ -14,6 +14,7 @@ import java.util.List;
 import butterknife.Bind;
 
 /**
+ * TabLayout+ViewPager页面,Gank主页
  * Created by zwl on 16/9/6.
  */
 public class ContentFragment extends BaseLazyFragment {

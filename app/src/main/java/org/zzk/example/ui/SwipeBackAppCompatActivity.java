@@ -11,6 +11,7 @@ import org.zzk.example.views.SwipeBackLayout;
 
 /**
  * Created by zwl on 16/8/29.
+ * 滑动返回,具体资料参考https://github.com/freecats/SwipeBackDemo
  */
 public class SwipeBackAppCompatActivity extends AppCompatActivity implements SwipeBackLayout.SwipeBackListener{
 

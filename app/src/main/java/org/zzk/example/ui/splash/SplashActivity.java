@@ -9,6 +9,7 @@ import org.zzk.example.ui.main.MainActivity;
 import butterknife.ButterKnife;
 
 /**
+ * 过渡页
  * Created by zwl on 16/9/5.
  */
 public class SplashActivity extends BaseMvpActivity<SplashPresenter> implements SplashContract.View{
@@ -24,6 +25,7 @@ public class SplashActivity extends BaseMvpActivity<SplashPresenter> implements 
 
     @Override
     public void initEventAndData() {
+        // android隐藏底部虚拟键NavigationBar实现全屏
         ButterKnife.findById(this, R.id.splash_layout).setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         mPresenter.checkIsFirstIn(this);
     }

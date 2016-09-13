@@ -28,6 +28,7 @@ import rx.Observable;
 import rx.functions.Action1;
 
 /**
+ * 主页,这个页面没用MVP模式,直接继承BaseActivity
  * Created by zwl on 16/9/5.
  */
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -78,6 +79,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         return false;
     }
 
+    /**
+     * 获取侧滑背景并进行模糊 灰白处理
+     */
     private void getBitmap() {
         Observable.just(R.mipmap.avator)
                 .map(integer -> {

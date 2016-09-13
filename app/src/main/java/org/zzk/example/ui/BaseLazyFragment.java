@@ -13,6 +13,7 @@ import java.lang.reflect.Field;
 import butterknife.ButterKnife;
 
 /**
+ * 基类Fragment,实现了懒加载
  * Created by zwl on 16/9/5.
  */
 public abstract class BaseLazyFragment extends Fragment{
@@ -32,10 +33,15 @@ public abstract class BaseLazyFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         isFirstLoad = true;
+        //绑定View
         View view = inflater.inflate(getlayoutId(), container, false);
         ButterKnife.bind(this, view);
         isPrepared = true;
+
+        //初始化事件和获取数据, 在此方法中获取数据不是懒加载模式
         initEventAndData();
+
+        //在此方法中获取数据为懒加载模式,如不需要懒加载,请在initEventAndData获取数据,GankFragment有使用实例
         lazyLoad();
         return view;
     }

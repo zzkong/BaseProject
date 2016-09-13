@@ -17,6 +17,7 @@ import cn.finalteam.loadingviewfinal.PtrClassicFrameLayout;
 import cn.finalteam.loadingviewfinal.PtrFrameLayout;
 
 /**
+ * gank上拉 下拉页面
  * Created by zwl on 16/9/6.
  */
 public class GankFragment extends BaseMvpFragment<GankPresenter> implements GankContract.View, OnLoadMoreListener{

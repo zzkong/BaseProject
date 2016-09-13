@@ -28,6 +28,9 @@ public class SplashPresenter extends BasePresenter<SplashContract.View> implemen
         super(dataManager, activity);
     }
 
+    /**
+     * 检测是否第一次启动
+     */
     @Override
     public void checkIsFirstIn(Context context) {
         SharedPreferences preferences = context.getSharedPreferences("isFirstIn", Context.MODE_PRIVATE);

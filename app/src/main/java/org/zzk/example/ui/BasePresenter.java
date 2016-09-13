@@ -8,6 +8,7 @@ import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
 
 /**
+ * 基类Presenter,对一些公共的事件做封装
  * Created by zwl on 16/9/5.
  */
 public abstract class BasePresenter<T extends IView> implements IPresenter<T>{
