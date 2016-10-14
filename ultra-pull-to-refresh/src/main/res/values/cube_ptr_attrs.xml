@@ -36,7 +36,7 @@
     </declare-styleable>
 
     <declare-styleable name="AVLoadingIndicatorView">
-        <attr name="indicator">
+        <attr name="indicators">
             <flag name="BallPulse" value="0"/>
             <flag name="BallScaleMultiple" value="15"/>
             <flag name="BallPulseSync" value="16"/>

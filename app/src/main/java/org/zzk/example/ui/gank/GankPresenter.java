@@ -1,16 +1,15 @@
 package org.zzk.example.ui.gank;
 
-import android.app.Activity;
 import android.support.v7.widget.LinearLayoutManager;
 
 import org.zzk.example.R;
 import org.zzk.example.adapter.commonadapter.CommonAdapter;
 import org.zzk.example.adapter.commonadapter.ViewHolder;
 import org.zzk.example.bean.GankBean;
-import org.zzk.example.data.DataManager;
+import org.zzk.example.data.api.gank.GankApi;
 import org.zzk.example.injector.PerFragment;
 import org.zzk.example.loadmore.RecyclerViewFinal;
-import org.zzk.example.ui.BasePresenter;
+import org.zzk.example.ui.base.BasePresenter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +24,14 @@ import rx.Subscription;
 @PerFragment
 public class GankPresenter extends BasePresenter<GankContract.View> implements GankContract.Presenter{
 
+    private GankApi mGankApi;
+
     @Inject
-    public GankPresenter(DataManager dataManager, Activity activity) {
-        super(dataManager, activity);
+    public GankPresenter(GankApi gankApi) {
+        this.mGankApi = gankApi;
     }
 
+    //初始化adapter,CommonAdapter代码量有点多,建议放Presenter层
     @Override
     public void initAdapter(RecyclerViewFinal recyclerViewFinal) {
         List<GankBean.Gank> ganks = new ArrayList<>();
@@ -52,13 +54,13 @@ public class GankPresenter extends BasePresenter<GankContract.View> implements G
      */
     @Override
     public void getGankData(String title, int page, boolean isRefresh) {
-        Subscription subscription = mDataManager.getGankData(title, page)
+        Subscription subscription = mGankApi.getGankData(title, page)
                 .subscribe(ganks -> {
                     if(isRefresh) mView.refresh(ganks);
                     else mView.loadMore(ganks);
                 }, throwable -> {
                     mView.showError();
                 });
-        addSubscribe(subscription);
+        mRxManager.add(subscription);
     }
 }

@@ -29,14 +29,21 @@ public class MyApp extends Application{
 
     private static AppComponent mAppComponent;
 
+    private static MyApp mMyApp;
+
     @Inject
     OkHttpClient mOkHttpClient;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        mMyApp = this;
         initComponent();
         initFrescoConfig();
+    }
+
+    public static MyApp getApplication(){
+        return mMyApp;
     }
 
     private void initComponent(){

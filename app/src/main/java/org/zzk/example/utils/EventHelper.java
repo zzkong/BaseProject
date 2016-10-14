@@ -3,7 +3,8 @@ package org.zzk.example.utils;
 import android.support.design.widget.NavigationView;
 import android.view.View;
 
-import org.zzk.example.ui.BaseActivity;
+import org.zzk.example.ui.base.BaseActivity;
+
 
 /**
  * Created by zzk on 15/11/27.

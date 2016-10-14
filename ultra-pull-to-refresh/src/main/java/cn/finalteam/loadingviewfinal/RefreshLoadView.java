@@ -48,7 +48,7 @@ public class RefreshLoadView extends View {
 
     private void init(AttributeSet attrs, int defStyle) {
         TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.AVLoadingIndicatorView);
-        mIndicatorId = a.getInt(R.styleable.AVLoadingIndicatorView_indicator, 0);
+        mIndicatorId = a.getInt(R.styleable.AVLoadingIndicatorView_indicators, 0);
         mIndicatorColor = a.getColor(R.styleable.AVLoadingIndicatorView_indicator_color, Color.WHITE);
         a.recycle();
         mPaint = new Paint();

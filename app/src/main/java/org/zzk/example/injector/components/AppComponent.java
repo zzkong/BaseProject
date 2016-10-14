@@ -2,7 +2,8 @@ package org.zzk.example.injector.components;
 
 import org.zzk.example.MyApp;
 import org.zzk.example.components.okhttp.OkHttpHelper;
-import org.zzk.example.data.api.GankApi;
+import org.zzk.example.data.api.gank.GankService;
+import org.zzk.example.data.api.meitu.MeituService;
 import org.zzk.example.injector.modules.ApiModule;
 import org.zzk.example.injector.modules.AppModule;
 
@@ -19,7 +20,9 @@ public interface AppComponent {
 
     OkHttpHelper getOkHttpHelper();
 
-    GankApi getGankApi();
+    GankService getGankService();
+
+    MeituService getMeituService();
 
     void inject(MyApp mApplication);
 }

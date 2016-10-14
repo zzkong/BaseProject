@@ -3,8 +3,7 @@ package org.zzk.example.ui.gank;
 import org.zzk.example.adapter.commonadapter.CommonAdapter;
 import org.zzk.example.bean.GankBean;
 import org.zzk.example.loadmore.RecyclerViewFinal;
-import org.zzk.example.ui.IPresenter;
-import org.zzk.example.ui.IView;
+import org.zzk.example.ui.base.IPresenter;
 
 import java.util.List;
 
@@ -13,7 +12,7 @@ import java.util.List;
  */
 public interface GankContract {
 
-    interface View extends IView{
+    interface View {
         void initAdapter(CommonAdapter commonAdapter);
 
         void refresh(List<GankBean.Gank> ganks);
@@ -23,7 +22,7 @@ public interface GankContract {
         void loadMore(List<GankBean.Gank> ganks);
     }
 
-    interface Presenter extends IPresenter<View>{
+    interface Presenter extends IPresenter<View> {
 
         void initAdapter(RecyclerViewFinal recyclerViewFinal);
 

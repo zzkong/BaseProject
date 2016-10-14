@@ -5,6 +5,7 @@ import android.app.Activity;
 import org.zzk.example.injector.PerFragment;
 import org.zzk.example.injector.modules.FragmentModule;
 import org.zzk.example.ui.gank.GankFragment;
+import org.zzk.example.ui.meitu.MeituListFragment;
 
 import dagger.Component;
 
@@ -17,4 +18,6 @@ public interface FragmentComponent {
     Activity getActivity();
 
     void inject(GankFragment gankFragment);
+
+    void inject(MeituListFragment meituListFragment);
 }

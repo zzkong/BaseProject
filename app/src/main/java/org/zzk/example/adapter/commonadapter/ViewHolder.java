@@ -10,7 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.facebook.drawee.view.SimpleDraweeView;
+
+import org.zzk.example.MyApp;
+import org.zzk.example.views.PLAImageView;
 
 /**
  * Created by zwl on 16/8/16.
@@ -58,9 +62,23 @@ public class ViewHolder extends RecyclerView.ViewHolder {
     }
 
     public ViewHolder setSimpleDrawByUrl(int viewId, String url){
+        if(null == url) return this;
         Uri uri = Uri.parse(url);
         SimpleDraweeView draweeView = (SimpleDraweeView) getView(viewId);
         draweeView.setImageURI(uri);
+        return this;
+    }
+
+    public ViewHolder setImageByUrl(int viewId, String url){
+        View view = getView(viewId);
+        if(view instanceof PLAImageView){
+            Glide.with(MyApp.getApplication()).load(url)
+                    .crossFade().into((PLAImageView) view);
+        }else {
+            Glide.with(MyApp.getApplication()).load(url)
+                    .crossFade().into((ImageView) view);
+        }
+
         return this;
     }
 

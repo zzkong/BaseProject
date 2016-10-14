@@ -7,7 +7,7 @@ import org.zzk.example.adapter.commonadapter.CommonAdapter;
 import org.zzk.example.bean.GankBean;
 import org.zzk.example.loadmore.OnLoadMoreListener;
 import org.zzk.example.loadmore.RecyclerViewFinal;
-import org.zzk.example.ui.BaseMvpFragment;
+import org.zzk.example.ui.base.BaseFragment;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ import cn.finalteam.loadingviewfinal.PtrFrameLayout;
  * gank上拉 下拉页面
  * Created by zwl on 16/9/6.
  */
-public class GankFragment extends BaseMvpFragment<GankPresenter> implements GankContract.View, OnLoadMoreListener{
+public class GankFragment extends BaseFragment<GankPresenter> implements GankContract.View, OnLoadMoreListener{
     @Bind(R.id.recycler_view)
     RecyclerViewFinal mRecyclerView;
     @Bind(R.id.refresh_view)

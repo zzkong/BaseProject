@@ -1,5 +1,7 @@
 package org.zzk.example.ui.main;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -16,7 +18,7 @@ import android.widget.ImageView;
 
 import org.zzk.example.R;
 import org.zzk.example.rxjava.RxSchedulers;
-import org.zzk.example.ui.BaseActivity;
+import org.zzk.example.ui.base.BaseActivity;
 import org.zzk.example.ui.gank.ContentFragment;
 import org.zzk.example.utils.BitmapUtil;
 import org.zzk.example.utils.EventHelper;
@@ -28,7 +30,7 @@ import rx.Observable;
 import rx.functions.Action1;
 
 /**
- * 主页,这个页面没用MVP模式,直接继承BaseActivity
+ *
  * Created by zwl on 16/9/5.
  */
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -43,11 +45,20 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Bind(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
 
+    public static void startActivity(Context mContext) {
+        Intent intent = new Intent(mContext, MainActivity.class);
+        mContext.startActivity(intent);
+    }
+
     private ImageView mHeadBgImg, mAvatorImg;
 
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initInjector() {
     }
 
     @Override
@@ -67,16 +78,6 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         getBitmap();
 
         setNewRootFragment(R.id.nav_gank);
-    }
-
-    @Override
-    protected boolean isApplyStatusBarTranslucency() {
-        return false;
-    }
-
-    @Override
-    protected boolean isApplyStatusBarColor() {
-        return false;
     }
 
     /**
@@ -109,8 +110,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             case R.id.nav_gank:
                 fragment = new ContentFragment();
                 break;
-//            case R.id.nav_gallery:
-//                break;
+            case R.id.nav_gallery:
+                fragment = new MeituMainFragment();
+                break;
 //            case R.id.nav_manage:
 //                break;
 //            case R.id.nav_send:

@@ -68,6 +68,6 @@ public abstract class CommonAdapter<T> extends MultiItemTypeAdapter<T>{
 
     public void addAllNotify(List<T> ts) {
         mDatas.addAll(ts);
-        notifyDataSetChanged();
+        notifyItemRangeChanged(mDatas.size() - 20, 20);
     }
 }

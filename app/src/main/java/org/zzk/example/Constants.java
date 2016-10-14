@@ -5,6 +5,8 @@ package org.zzk.example;
  */
 public class Constants {
 
-    public static final String BASE_URL = "http://gank.io/api/data/";
+    public static final String BASE_GANK_URL = "http://gank.io/api/data/";
+
+    public static final String BASE_MEITU_URL = "http://image.baidu.com";
 
 }

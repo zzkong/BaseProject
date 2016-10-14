@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 
 import org.zzk.example.data.DataManager;
 import org.zzk.example.injector.PerActivity;
-import org.zzk.example.ui.BasePresenter;
+import org.zzk.example.ui.base.BasePresenter;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,9 +23,11 @@ import rx.functions.Action1;
 @PerActivity
 public class SplashPresenter extends BasePresenter<SplashContract.View> implements SplashContract.Presenter {
 
+    private DataManager mDataManager;
+
     @Inject
-    public SplashPresenter(DataManager dataManager, Activity activity) {
-        super(dataManager, activity);
+    public SplashPresenter(DataManager dataManager) {
+        this.mDataManager = dataManager;
     }
 
     /**
@@ -44,6 +46,6 @@ public class SplashPresenter extends BasePresenter<SplashContract.View> implemen
                         editor.commit();
                     } else mView.readyGoMain();
                 });
-        addSubscribe(subscription);
+        mRxManager.add(subscription);
     }
 }

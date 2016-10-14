@@ -1,7 +1,8 @@
 package org.zzk.example.injector.modules;
 
 import org.zzk.example.Constants;
-import org.zzk.example.data.api.GankApi;
+import org.zzk.example.data.api.gank.GankService;
+import org.zzk.example.data.api.meitu.MeituService;
 
 import javax.inject.Singleton;
 
@@ -20,14 +21,27 @@ public class ApiModule {
 
     @Provides
     @Singleton
-    public GankApi provideGankApi(OkHttpClient okHttpClient){
+    public GankService provideGankService(OkHttpClient okHttpClient){
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constants.BASE_URL)
+                .baseUrl(Constants.BASE_GANK_URL)
                 .client(okHttpClient)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        GankApi gankApi = retrofit.create(GankApi.class);
-        return gankApi;
+        GankService gankService = retrofit.create(GankService.class);
+        return gankService;
+    }
+
+    @Provides
+    @Singleton
+    public MeituService provideMeituService(OkHttpClient okHttpClient){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Constants.BASE_MEITU_URL)
+                .client(okHttpClient)
+                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        MeituService meituService = retrofit.create(MeituService.class);
+        return meituService;
     }
 }

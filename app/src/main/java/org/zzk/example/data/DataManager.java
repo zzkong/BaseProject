@@ -2,28 +2,19 @@ package org.zzk.example.data;
 
 import android.content.SharedPreferences;
 
-import org.zzk.example.bean.GankBean;
-import org.zzk.example.data.api.GankApi;
-import org.zzk.example.rxjava.RxSchedulers;
-
-import java.util.List;
-
 import javax.inject.Inject;
 
 import rx.Observable;
 import rx.Subscriber;
-import rx.functions.Func1;
 
 /**
  * Created by zwl on 16/9/5.
  */
 public class DataManager {
 
-    private GankApi mGankApi;
-
     @Inject
-    public DataManager(GankApi gankApi){
-        this.mGankApi = gankApi;
+    public DataManager(){
+
     }
 
     public Observable<Boolean> getIsFirstIn(final SharedPreferences preferences){
@@ -35,17 +26,5 @@ public class DataManager {
                 subscriber.onCompleted();
             }
         });
-    }
-
-    public Observable<List<GankBean.Gank>> getGankData(String type, int page){
-        return mGankApi.getGankData(type, page)
-                .compose(RxSchedulers.schedulersTransformer)
-                .map(new Func1() {
-                    @Override
-                    public Object call(Object o) {
-                        GankBean gankBean = (GankBean) o;
-                        return gankBean.results;
-                    }
-                });
     }
 }
